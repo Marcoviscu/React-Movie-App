@@ -1,0 +1,7 @@
+@import '../../styles/_variables.scss';
+@import '../../styles/_mixins.scss';
+
+.MainSection {
+    @include flex-element(row);
+    background-color: $primary-background-color;
+}
