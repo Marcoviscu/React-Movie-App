@@ -2,6 +2,8 @@
 @import '../../styles/_mixins.scss';
 
 .MainSection {
-    @include flex-element(row);
+    @include flex-element(column);
+    width: 100wv;
+    color: $primary-color;
     background-color: $primary-background-color;
 }

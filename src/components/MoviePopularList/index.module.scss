@@ -1,0 +1,10 @@
+@import "../../styles/_mixins.scss";
+@import "../../styles/_variables.scss";
+
+.PopularList {
+    @include flex-element(row,space-between);
+    overflow-x: scroll;
+    width: 100wv;
+    height:20%;
+
+}

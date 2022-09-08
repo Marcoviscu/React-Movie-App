@@ -1,10 +1,10 @@
 import Navbar from "./components/Navbar";
 import MainSection from "./components/MainSection";
-import "./App.scss";
+import styles from './App.module.scss';
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.App}>
       <Navbar />
       <MainSection />
     </div>

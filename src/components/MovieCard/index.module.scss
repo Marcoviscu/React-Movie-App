@@ -1,0 +1,32 @@
+@import "../../styles/_mixins.scss";
+@import "../../styles/_variables.scss";
+
+.MovieCard {
+    // @include flex-element(row,center,stretch,nowrap,0px);
+    @include box-model();
+    width: fit-content;
+    height: fit-content;
+    position:relative;
+    .Title {
+        position:absolute;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        z-index: 1;
+        color:$primary-color;
+        text-shadow: 1px 1px 3px rgb(3, 3, 3);
+    }
+    .Rating {
+        position:absolute;
+        top:80%;
+        left:5%;
+        color:$third-color;
+        z-index:200;
+        font-weight:bold;
+        font-size:large;
+        text-shadow: 1px 1px 3px rgb(3, 3, 3);
+    }
+    .Img {
+     filter: saturate(1.5);
+    }
+}
