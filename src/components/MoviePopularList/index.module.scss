@@ -2,9 +2,11 @@
 @import "../../styles/_variables.scss";
 
 .PopularList {
-    @include flex-element(row,space-between);
-    overflow-x: scroll;
-    width: 100wv;
-    height:20%;
+  @include flex-element(row, flex-start);
+  overflow: scroll;
+  overflow-y: hidden;
+  gap: 5px;
+  width:100vw;
+  height: auto;
 
 }

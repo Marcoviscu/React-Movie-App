@@ -1,22 +1,19 @@
-import MainCard from "../MainCard";
-import "./index.scss";
+import styles from "./index.module.scss";
+import MovieCard from "../MovieCard";
 
-const TopRatedList = ({ title, cardList}) => {
-    return (
-        <div className="TopRatedList">
-            <h1 className="TopRatedList--title">{ title } </h1>
-            <div className="TopRatedList--list">
-                {cardList.map(movie => (
-                    <MainCard cardData= { movie }
-                    cardStyle= {{width: '200px', height: '70px', fontSize: '16px' }}
-                    key={ movie.id } 
-                    />
-                ))
-            }
-            </div>
-        </div>
 
-    )
-}
+
+const TopRatedList = ({moviesTopRatedList}) => {
+
+
+ return (
+  <div classname={styles.container}>
+    <div className={styles.TopRatedList}>
+    { moviesTopRatedList && moviesTopRatedList.map( movie => <MovieCard movieCardData={ movie } key={ movie.id }/>)}
+    
+    </div>
+  </div>
+  )
+};
 
 export default TopRatedList;

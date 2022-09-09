@@ -4,6 +4,21 @@
 .MainSection {
     @include flex-element(column);
     width: 100wv;
-    color: $primary-color;
     background-color: $primary-background-color;
+    padding-bottom: 200px;
+    font-size: small;
+    .title{
+        @include flex-element(row,flex-start);
+        text-shadow: 0 0 3px black;
+        
+    }
+    .container {
+        width: 50%;
+        display: flex;
+    }
+}
+
+h3 {
+    padding-left: 20px;
+
 }

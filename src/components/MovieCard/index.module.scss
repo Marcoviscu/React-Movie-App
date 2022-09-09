@@ -4,29 +4,35 @@
 .MovieCard {
     // @include flex-element(row,center,stretch,nowrap,0px);
     @include box-model();
-    width: fit-content;
-    height: fit-content;
     position:relative;
+    border-radius:4%;
+
     .Title {
         position:absolute;
         display: flex;
         justify-content: center;
         align-items:center;
+        font-size:large;
         z-index: 1;
         color:$primary-color;
         text-shadow: 1px 1px 3px rgb(3, 3, 3);
+        padding-left: 10px;
     }
     .Rating {
         position:absolute;
-        top:80%;
+        top:75%;
         left:5%;
-        color:$third-color;
+        color:$rating-color;
         z-index:200;
         font-weight:bold;
-        font-size:large;
         text-shadow: 1px 1px 3px rgb(3, 3, 3);
     }
     .Img {
      filter: saturate(1.5);
+     width:320px;
+    height:180px;
+    object-fit: cover;
+    border-radius:4%;
+
     }
 }
