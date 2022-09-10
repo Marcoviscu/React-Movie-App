@@ -3,10 +3,11 @@
 
 .Navbar {
   @include flex-element(row, center,center);
-
+  
   color: $primary-color;
   height: 70px;
   background-color: $primary-background-color;
   border-bottom: 2px solid $primary-border-color;
   z-index: 9;
+  box-sizing: border-box;
 }

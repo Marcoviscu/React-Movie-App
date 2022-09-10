@@ -2,15 +2,16 @@
 @import '/src/styles/_mixins.scss';
 
 
+
+
 html, body {
   scroll-behavior: smooth;
   @include box-model();
-  width: 100vw;
 
 }
 
 .App {
 @include box-model();
-padding-bottom: 100px;
+box-sizing: border-box;
 color: $primary-color;
 }

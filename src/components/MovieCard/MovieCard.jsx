@@ -1,8 +1,10 @@
 import styles from "./index.module.scss";
+import React from 'react';
 
 const MovieCard = ({movieCardData}) => {
     
     const { title, vote_average, backdrop_path} = movieCardData;
+
 
     return (
         <div className={styles.MovieCard}>

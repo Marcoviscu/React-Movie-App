@@ -1,0 +1,35 @@
+
+.CardList {
+  overflow: hidden;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  height: 60%;
+
+  .mySwiper {
+    box-sizing: border-box;
+    .Img {
+      height: 60%;
+      width: 100%;
+        object-fit: cover;
+        object-position:50%  50%;
+    }
+  }
+}
+
+.CardListCard {
+  position: relative;
+  border-radius: 3%;
+  height: 60%;
+  .Title {
+    font-size:medium;
+    z-index: 10;
+    position:absolute;
+    left: 10%;
+    text-shadow: 0 0 2px black;
+  }
+  .Img {
+    border-radius: 3%;
+    
+  }
+
+}
