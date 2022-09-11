@@ -2,12 +2,18 @@
 @import "../../styles/_mixins.scss";
 
 .Navbar {
-  @include flex-element(row, center,center);
-  
+  @include flex-element(row, space-between, center);
+  position:sticky;
   color: $primary-color;
   height: 70px;
   background-color: $primary-background-color;
   border-bottom: 2px solid $primary-border-color;
   z-index: 9;
   box-sizing: border-box;
+  .Logo {
+    padding-left: 1rem;
+  }
+  .AnchorWrapper {
+    display: flex;
+  }
 }

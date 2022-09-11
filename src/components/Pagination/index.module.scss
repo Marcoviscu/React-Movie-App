@@ -1,0 +1,28 @@
+@import "../../styles/_mixins.scss";
+@import "../../styles/_variables.scss";
+
+
+.Pagination {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    .MovieList {
+    @include flex-element(row,center,stretch,wrap);
+    padding-top:1rem;        
+    }
+    .BtnContainer {
+        @include flex-element(row,center);
+        padding: 10px;
+        gap: 10px;
+    }
+    .Title {
+        background-color: $secondary-bkg-color;
+        padding: 5px;
+        h1 {
+            @include flex-element(row,center);
+            text-shadow: 0 0 3px black;
+            box-sizing: border-box;
+        }
+
+    }
+
+}

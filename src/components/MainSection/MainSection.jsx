@@ -1,42 +1,48 @@
-import { useState, useEffect } from "react";
+import { useState,useEffect } from "react";
 import { GET } from "../../utils/api.js";
-import styles from './index.module.scss';
+import styles from "./index.module.scss";
 import CardList from "../CardList/index.jsx";
-import Hero from '../Hero/index.jsx';
-
-
+import Hero from "../Hero/index.jsx";
+import Pagination from "../Pagination/index.jsx";
 
 const MainSection = () => {
+  const [moviesPopularData, setMoviesPopularData] = useState();
+  const [moviesTopRatedData, setMoviesTopRatedData] = useState();
+  const [moviesUpcomingData, setMoviesUpcomingData] = useState();
 
-const [moviesPopularData, setMoviesPopularData] = useState([]);
-const [moviesTopRatedData, setMoviesTopRatedData] = useState([]);
-const [moviesUpcomingData, setMoviesUpcomingData] = useState([]);
+  useEffect(() => {
+    GET("movie", "popular", '&language=en-US&page=1').then((data) =>
+      setMoviesPopularData(data.results)
+    );
 
-useEffect(() => {
-    GET('movie','popular','&language=en-US').then(data => setMoviesPopularData(data));
+    GET("movie", "top_rated", '&language=en-US&page=1').then((data) =>
+      setMoviesTopRatedData(data.results)
+    );
 
-    GET('movie', 'top_rated', '&language=en-US').then(data => setMoviesTopRatedData(data));
+    GET("movie", "upcoming", '&language=en-US&page=1').then((data) =>
+      setMoviesUpcomingData(data.results)
+    );
+  }, []);
 
-    GET('movie', 'upcoming', '&language=en-US').then(data => setMoviesUpcomingData(data));
 
-},[]);
-
-{console.log(moviesUpcomingData.results)}
-
-return (
+  return (
     <div className={styles.MainSection}>
-        <Hero heroData={moviesPopularData.results}/>
-        <h3  className={styles.title}>Top Rated</h3>
-        <div>
-            <CardList cardListData= { moviesTopRatedData.results }/>
-        </div>
-        <h3 className={styles.title}>Upcoming</h3>
-        <div>
-            <CardList cardListData ={ moviesUpcomingData.results }/>
-        </div>
+      <Hero heroData={moviesPopularData} />
+      <h3 className={styles.title}>Top Rated</h3>
+      <div>
+        <CardList cardListData={moviesTopRatedData} />
+      </div>
+      <h3 className={styles.title}>Upcoming</h3>
+      <div>
+        <CardList cardListData={moviesUpcomingData} />
+      </div>
+
+      <div className={styles.Pagination}>
+        <Pagination/>
+      </div>
+
     </div>
-   )
-    
-}
+  );
+};
 
 export default MainSection;

@@ -5,10 +5,12 @@
   // @include flex-element(row,center,stretch,nowrap,0px);
   @include box-model();
   position: relative;
-  border-radius: 4%;
+  border-radius: 1%;
   transition: 0.25s;
   height: fit-content;
   box-sizing: border-box;
+  flex: 0 0 auto;
+  padding: 10px;
 
   .Title {
     position: absolute;
@@ -37,7 +39,7 @@
     width: 320px;
     height: 170px;
     object-fit: cover;
-    border-radius: 4%;
+    border-radius: 1%;
   }
 }
 
@@ -45,4 +47,5 @@
 //   transform: scale(1.05);
 //   z-index: 4;
 //   border:1px solid ;
+//   padding:0 px;
 // }

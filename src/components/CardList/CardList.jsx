@@ -31,7 +31,6 @@ const CardList = ({cardListData}) => {
 
       <div className={styles.container}>
         <div className={styles.TopRatedList}>
-          {console.log({cardListData})}
           {cardListData && cardListData.map(movie => <SwiperSlide key={movie.id} className={styles.CardListCard}><h1 className={styles.Title}>{ movie.title}</h1><img className={styles.Img}src={`https://image.tmdb.org/t/p/original${ movie.backdrop_path }`} alt='image'></img> </SwiperSlide>)}
         </div>
       </div>
