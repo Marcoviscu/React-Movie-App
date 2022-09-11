@@ -2,8 +2,7 @@
 @import "../../styles/_mixins.scss";
 
 .Navbar {
-  @include flex-element(row, space-between, center);
-  position:sticky;
+  @include flex-element(row,flex-start,center, $gap: 100px);
   color: $primary-color;
   height: 70px;
   background-color: $primary-background-color;
@@ -11,9 +10,17 @@
   z-index: 9;
   box-sizing: border-box;
   .Logo {
-    padding-left: 1rem;
+    padding-left: 2rem;
+    transform: scale(1.5);
   }
   .AnchorWrapper {
     display: flex;
+      gap: 2rem;
+      list-style-type: none;
+      color:$primary-color;
+      .a{
+        text-decoration:none;
+      }
+    
   }
 }

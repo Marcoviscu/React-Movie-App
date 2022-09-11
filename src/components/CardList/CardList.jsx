@@ -5,7 +5,7 @@ import "swiper/scss";
 import "swiper/scss/pagination";
 import "swiper/scss/navigation";
 
-import { Pagination, Navigation } from "swiper";
+import { Grid,Scrollbar } from "swiper";
 
 
 const CardList = ({cardListData}) => {
@@ -16,15 +16,15 @@ const CardList = ({cardListData}) => {
   <div className={styles.CardList}>
   <Swiper
   slidesPerView={2}
-  spaceBetween={10}
-  slidesPerGroup={2}
-  loop={false}
-  loopFillGroupWithBlank={true}
+  grid={{
+    rows: 1,
+  }}
+  spaceBetween={5}
   pagination={{
     clickable: true,
   }}
-  navigation={true}
-  modules={[Pagination, Navigation]}
+  scrollbar={{hide:true}}
+  modules={[Scrollbar,Grid]}
   className={styles.mySwiper}
 >
 

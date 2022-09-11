@@ -3,12 +3,12 @@
   overflow: hidden;
   flex: 0 0 auto;
   box-sizing: border-box;
-  height: 60%;
+  height: 100%;
 
   .mySwiper {
     box-sizing: border-box;
     .Img {
-      height: 60%;
+      height: 100%;
       width: 100%;
         object-fit: cover;
         object-position:50%  50%;
@@ -18,7 +18,7 @@
 
 .CardListCard {
   position: relative;
-  height: 60%;
+  height: 100%;
   .Title {
     font-size:medium;
     z-index: 10;
@@ -27,7 +27,7 @@
     text-shadow: 0 0 2px black;
   }
   .Img {
-    
+    object-fit: cover;
   }
 
 }
