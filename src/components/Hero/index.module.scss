@@ -1,28 +1,38 @@
 .Hero {
-    box-sizing: border-box;
-    flex: 0 0 auto;
-    overflow: hidden;
-    
-    .mySwiper {
-        box-sizing: border-box;
-        height: 80%;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  overflow: hidden;
 
-        .Img {
-            height: 80%;
-            width: 100%;
-            object-fit: cover;
-            object-position:50%  50%;
-        }
+  .mySwiper {
+    .Img {
+      height: 80%;
+      width: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
     }
+  }
 }
 
 .HeroCard {
-    position: relative;
-    .Title {
-        z-index: 10;
-        position:absolute;
-        left: 5%;
-        text-shadow: 0 0 4px black;
-    }
+  position: relative;
+  .Title {
+    z-index: 10;
+    position: absolute;
+    left: 5%;
+    text-shadow: 0 0 4px black;
+  }
 }
 
+@media screen and (min-width: 480px) {
+  .Hero {
+    height: calc(100vw - 70%);
+    .mySwiper {
+      box-sizing: border-box;
+      height: 80%;
+
+      .Img {
+        object-position: 50% 10%;
+      }
+    }
+  }
+}

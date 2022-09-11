@@ -1,26 +1,39 @@
 @import "../../styles/_variables.scss";
 @import "../../styles/_mixins.scss";
 
+
 .Navbar {
-  @include flex-element(row,flex-start,center, $gap: 100px);
-  color: $primary-color;
+  background-color: $secondary-bkg-color;
   height: 70px;
   background-color: $primary-background-color;
   border-bottom: 2px solid $primary-border-color;
+  position: sticky;
+  top: 0;
   z-index: 9;
   box-sizing: border-box;
-  .Logo {
-    padding-left: 2rem;
-    transform: scale(1.5);
-  }
-  .AnchorWrapper {
+  display: flex;
+  align-items: center;
+  .Container {
     display: flex;
-      gap: 2rem;
+    flex-direction: row;
+     align-items: center;
+     position: relative;
+     left: 1rem;
+    .Logo {
+      transform: scale(1.5);
+    }
+    .AnchorWrapper {
+      display: flex;
+      gap: 1rem;
       list-style-type: none;
-      color:$primary-color;
-      .a{
-        text-decoration:none;
-      }
-    
+      color: $primary-color;
+    }
+  }
+  .InputSearchContainer {
+    position: absolute;
+    transform: scale(1.5);
+    left:calc(100vw - 3.5rem);
+    display: flex;
+    justify-content: flex-end;
   }
 }
