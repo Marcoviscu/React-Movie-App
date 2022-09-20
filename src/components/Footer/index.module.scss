@@ -1,0 +1,31 @@
+@import "../../styles/_mixins.scss";
+@import "../../styles/_variables.scss";
+
+.Main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  background-color: $primary-background-color;
+  list-style-type: none;
+  text-decoration: none;
+  padding-bottom: 3rem;
+  .Ref {
+    list-style-type: none;
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 2rem;
+    gap:2rem;
+    .Link {
+        svg{transform:scale(3); color: $primary-color;}
+    }
+  }
+}

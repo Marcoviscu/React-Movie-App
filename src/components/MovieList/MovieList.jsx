@@ -25,7 +25,7 @@ const MovieList = () => {
           <h1>Popular Movies</h1>
         </div>
         <div className={styles.Pagination}>
-          <MovieCard movieCardData={moviesLatestData} />
+          <MovieCard className={styles.Card} movieCardData={moviesLatestData} />
         </div>
 
         <div className={styles.BtnContainer}>

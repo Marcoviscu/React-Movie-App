@@ -4,10 +4,9 @@
 
 .Main {
     padding-top: 2rem;
-    padding-bottom: 4rem;
     .Pagination {
     @include flex-element(row,center,stretch,wrap);
-    padding-top:1rem;        
+    padding-top:1rem;       
     }
     .BtnContainer {
         @include flex-element(row,center);
