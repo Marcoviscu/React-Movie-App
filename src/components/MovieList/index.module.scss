@@ -2,7 +2,6 @@
 @import "../../styles/_variables.scss";
 
 .Main {
-  padding-top: 2rem;
   .Pagination {
     @include flex-element(row, center, stretch, wrap);
     padding-top: 1rem;

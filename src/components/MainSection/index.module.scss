@@ -3,20 +3,17 @@
 
 .MainSection {
     @include flex-element(column);
-    // overflow: hidden;
-    
-
-    background-color: $primary-background-color;
-    // padding: 0px 20px 200px;
+    background-color: rgb(37, 37, 37);    
     font-size: small;
     box-sizing: border-box;
     .title{
         @include flex-element(row,flex-start);
         text-shadow: 0 0 3px black;
         background-color: $secondary-bkg-color;
+        padding: 1rem;
         border-top: 1px solid $primary-color;
-        padding: 0.3rem;
-        
+        border-bottom: 1px solid $primary-color;
+
     }
     .container {
         overflow: scroll;
@@ -30,4 +27,8 @@ h3 {
     padding-left: 20px;
     box-sizing: border-box;
 
+}
+
+.MovieList {
+// background-color: $primary-background-color;
 }
