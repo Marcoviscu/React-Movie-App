@@ -3,9 +3,11 @@ import { GET } from "../../utils/api.js";
 import styles from "./index.module.scss";
 import CardList from "../CardList/index.jsx";
 import Hero from "../Hero/index.jsx";
-import Pagination from "../Pagination/index.jsx";
+import MovieList from "../MovieList/index.jsx";
+// import GeneralContext from "../../utils/initialState.jsx";
 
 const MainSection = () => {
+
   const [moviesPopularData, setMoviesPopularData] = useState();
   const [moviesTopRatedData, setMoviesTopRatedData] = useState();
   const [moviesUpcomingData, setMoviesUpcomingData] = useState();
@@ -37,8 +39,8 @@ const MainSection = () => {
         <CardList cardListData={moviesUpcomingData} />
       </div>
 
-      <div className={styles.Pagination}>
-        <Pagination/>
+      <div className={styles.MovieList}>
+          <MovieList/>
       </div>
 
     </div>

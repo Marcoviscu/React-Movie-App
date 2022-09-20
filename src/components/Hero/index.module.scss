@@ -25,12 +25,13 @@
 
 @media screen and (min-width: 480px) {
   .Hero {
-    height: calc(100vw - 70%);
     .mySwiper {
       box-sizing: border-box;
       height: 80%;
 
       .Img {
+        max-height: 400px ;
+        aspect-ratio: 16 / 9;
         object-position: 50% 10%;
       }
     }

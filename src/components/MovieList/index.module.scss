@@ -2,10 +2,10 @@
 @import "../../styles/_variables.scss";
 
 
-.Pagination {
+.Main {
     padding-top: 2rem;
     padding-bottom: 4rem;
-    .MovieList {
+    .Pagination {
     @include flex-element(row,center,stretch,wrap);
     padding-top:1rem;        
     }
@@ -13,6 +13,16 @@
         @include flex-element(row,center);
         padding: 10px;
         gap: 10px;
+        background-color: $secondary-bkg-color;
+        
+        gap: 100px;
+        .Btn {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            svg{color: $primary-color; transform:scale(1.4);};
+            color: whitesmoke;
+            cursor: pointer;
+        }
     }
     .Title {
         background-color: $secondary-bkg-color;

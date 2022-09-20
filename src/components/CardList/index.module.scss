@@ -31,3 +31,12 @@
   }
 
 }
+
+
+@media screen and (min-width: 480px) {
+  .Img {
+    max-height: 300px;
+    width: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
