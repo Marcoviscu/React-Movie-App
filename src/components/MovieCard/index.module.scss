@@ -2,7 +2,6 @@
 @import "../../styles/_variables.scss";
 
 .MovieCard {
-  // @include flex-element(row,center,stretch,nowrap,0px);
   @include box-model();
   position: relative;
   border-radius: 1%;
@@ -55,10 +54,3 @@
     }
   }
 }
-
-// .MovieCard:hover {
-//   transform: scale(1.05);
-//   z-index: 4;
-//   border:1px solid ;
-//   padding:0 px;
-// }

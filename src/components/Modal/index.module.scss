@@ -1,0 +1,32 @@
+.Main {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  .Overlay {
+    cursor: pointer;
+    position:absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.52);
+    color: whitesmoke;
+  }
+  .Content {
+    cursor: default;
+    height: 70%;
+    width: 80%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .Image {
+      width: 20%;
+      height: auto;
+    }
+  }
+}
