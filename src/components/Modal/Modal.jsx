@@ -14,26 +14,30 @@ const Modal = ({ movieCardData }) => {
         className={styles.Overlay}
         onClick={() => dispatch({ type: "SET_MODAL_INVISIBLE" })}
       />
-      <div className={styles.Content}>
-        <span className={styles.remove}><GiCancel
-              onClick={() => dispatch({ type: "SET_MODAL_INVISIBLE" })}
-            /></span>
-        <span className={styles.title}>
-          <h1>{title}</h1>{" "}
-            
+      <div className={styles.Wrapper}>
+        <span className={styles.remove}>
+          <GiCancel onClick={() => dispatch({ type: "SET_MODAL_INVISIBLE" })} />
         </span>
-        <p className={styles.rating}>
-          {vote_average}
-          <AiFillStar />
-        </p>
+        <span className={styles.title}>
+          <h1>{title}</h1>
+        </span>
 
-        <img
-          className={styles.Image}
-          src={`https://image.tmdb.org/t/p/original${poster_path}`}
-          alt="image"
-        />
-        <div className={styles.text}>
-          <p>{overview}</p>
+        <div className={styles.Content}>
+          <div>
+            <img
+              className={styles.Image}
+              src={`https://image.tmdb.org/t/p/original${poster_path}`}
+              alt="image"
+            />
+            
+          </div>
+          <div className={styles.overview}>
+
+            <p >{overview}</p><p className={styles.rating}>
+              Rating:{vote_average}
+              <AiFillStar />
+            </p>
+          </div>
         </div>
       </div>
     </div>

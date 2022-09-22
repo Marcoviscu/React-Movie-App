@@ -27,7 +27,7 @@
     background-color: rgba(0, 0, 0, 0.52);
     color: whitesmoke;
   }
-  .Content {
+  .Wrapper {
     overflow-y: scroll;
     cursor: default;
     max-height: 80%;
@@ -41,6 +41,7 @@
     text-shadow: 2px 2px black;
     z-index: 101;
     padding: 0px 1rem;
+
     .title {
       display: flex;
       flex-direction: row;
@@ -48,23 +49,64 @@
       padding: 1rem;
       align-items: center;
       padding: 0;
+      h1 {
+        padding: 0;
+        margin: 0;
+      }
     }
     .remove {
-        position: relative;
-        top:20%;
-        left:40%;
-        padding-top:1rem;
-        svg{color:$secondary-bkg-color};
+      position: sticky;
+      top: 0;
+      left: 90%;
+      padding-top: 1rem;
+      svg {
+        color: $secondary-bkg-color;
+        cursor: pointer;
+      }
     }
-    .Image {
-      width: 80%;
-      height: auto;
-    }
-    .text {
+
+    .Content {
       display: flex;
+      flex-direction: column;
       justify-content: center;
+      align-items: center;
       text-align: center;
       padding: 1rem;
+      .Image {
+        width: 80%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .Main {
+    .Wrapper {
+      max-height: 85%;
+      width: 60%;
+      overflow-y: hidden;
+      overflow-x: hidden;
+      .title {
+        margin: 0;
+        padding: 0px;
+      }
+      .Content {
+        justify-content: space-evenly;
+        flex-direction: row;
+
+        .Image {
+          width: 20rem;
+        }
+        .overview {
+          padding: 2rem;
+          width: 20rem;
+        }
+      }
+      .remove {
+        top: 2%;
+        left: 95%;
+      }
     }
   }
 }
