@@ -10,8 +10,6 @@
     @include flex-element(row, center);
     padding: 10px;
     gap: 10px;
-    background-color: $secondary-bkg-color;
-    border-top: 1px solid $primary-color;
 
     gap: 100px;
     .Btn {
@@ -26,9 +24,6 @@
     }
   }
   .Title {
-    background-color: $secondary-bkg-color;
-    border-top: 1px solid $primary-color;
-    padding: 5px;
     h1 {
       @include flex-element(row, center);
       text-shadow: 0 0 3px black;

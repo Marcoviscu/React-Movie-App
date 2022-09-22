@@ -9,10 +9,6 @@
     .title{
         @include flex-element(row,flex-start);
         text-shadow: 0 0 3px black;
-        background-color: $secondary-bkg-color;
-        padding: 1rem;
-        border-top: 1px solid $primary-color;
-        border-bottom: 1px solid $primary-color;
 
     }
     .container {

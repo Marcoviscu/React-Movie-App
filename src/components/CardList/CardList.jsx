@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/scss";
 import "swiper/scss/pagination";
 import "swiper/scss/navigation";
-import { Grid, Scrollbar } from "swiper";
+import { Grid, Scrollbar,Pagination } from "swiper";
 
 import {useDispatch} from 'react-redux';
 
@@ -31,7 +31,7 @@ const CardList = ({ cardListData }) => {
           clickable: true,
         }}
         scrollbar={{ hide: true }}
-        modules={[Scrollbar, Grid]}
+        modules={[Scrollbar,Pagination, Grid ]}
         className={styles.mySwiper}
       >
         <div className={styles.container}>
